@@ -72,14 +72,14 @@ public class TGFluids implements ITGInitializer {
 		if(addedAcid) {
 			
 			BLOCK_FLUID_ACID = new BlockFluidAcid(ACID,Material.WATER).setRegistryName(new ResourceLocation(Techguns.MODID, "block_creeper_acid"))
-					.setUnlocalizedName(Techguns.MODID+".block_creeper_acid").setCreativeTab(Techguns.tabTechgun);
+					.setTranslationKey(Techguns.MODID+".block_creeper_acid").setCreativeTab(Techguns.tabTechgun);
 		}
 		
 		addedMilk = FluidRegistry.registerFluid(new Fluid("milk", new ResourceLocation(Techguns.MODID, "blocks/milk_still"), new ResourceLocation(Techguns.MODID, "blocks/milk_flow")).setUnlocalizedName("milk"));
 		MILK = FluidRegistry.getFluid("milk");
 		if(addedMilk) {			
 			BLOCK_FLUID_MILK = new BlockFluidAcid(MILK,Material.WATER).setRegistryName(new ResourceLocation(Techguns.MODID, "block_milk"))
-					.setUnlocalizedName(Techguns.MODID+".block_milk").setCreativeTab(Techguns.tabTechgun);
+					.setTranslationKey(Techguns.MODID+".block_milk").setCreativeTab(Techguns.tabTechgun);
 		}
 	}
 
@@ -128,7 +128,7 @@ public class TGFluids implements ITGInitializer {
 		//MILK = FluidRegistry.getFluid("milk");
 		
 		/*	if (MILK==null){
-				MILK = new Fluid("milk").setGaseous(false).setDensity(1050).setViscosity(1050).setUnlocalizedName("milk");
+				MILK = new Fluid("milk").setGaseous(false).setDensity(1050).setViscosity(1050).setTranslationKey("milk");
 				addedMilk=true;
 				FluidRegistry.registerFluid(MILK);
 				FluidContainerRegistry.registerFluidContainer(FluidRegistry.getFluidStack("milk", FluidContainerRegistry.BUCKET_VOLUME), new ItemStack(Items.milk_bucket), new ItemStack(Items.bucket));

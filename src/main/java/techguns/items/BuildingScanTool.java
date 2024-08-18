@@ -98,12 +98,12 @@ public class BuildingScanTool extends GenericItem {
 						MBlock mblock = new MBlock(bs);
 						if (!blockList.contains(mblock)) {
 							blockList.add(mblock);
-							//sbDefBlocks.append("MBlock block_"+blockList.indexOf(mblock)+" = new MBlock(Block.getBlockFromName(\""+mblock.block.getUnlocalizedName()+"\"), "+mblock.meta+");\n");
-							//sbDefBlocks.append("blockList.add(new MBlock(Block.getBlockFromName(\""+mblock.block.getUnlocalizedName()+"\"), "+mblock.meta+"));\n");
+							//sbDefBlocks.append("MBlock block_"+blockList.indexOf(mblock)+" = new MBlock(Block.getBlockFromName(\""+mblock.block.getTranslationKey()+"\"), "+mblock.meta+");\n");
+							//sbDefBlocks.append("blockList.add(new MBlock(Block.getBlockFromName(\""+mblock.block.getTranslationKey()+"\"), "+mblock.meta+"));\n");
 							sbDefBlocks.append("blockList.add(new MBlock(\""+mblock.block.getRegistryName()+"\", "+mblock.meta+"));\n");
 						}	
 						//String name = "block_"+blockList.indexOf(mblock);
-						//System.out.println("Block("+coordX+","+coordY+","+coordZ+"):"+b.getUnlocalizedName()+":"+meta);
+						//System.out.println("Block("+coordX+","+coordY+","+coordZ+"):"+b.getTranslationKey()+":"+meta);
 						//sbSetBlocks.append("BlockUtils.setBlockRotated(world, "+name+", posX, posY, posZ, "+ix+", "+iy+", "+iz+", cntX, cntY, cntZ, rotation);\n");					
 						blockPosList.add(new BlockPosInd(ix, iy, iz, blockList.indexOf(mblock)));
 					}

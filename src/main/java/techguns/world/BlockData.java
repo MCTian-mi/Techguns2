@@ -51,7 +51,7 @@ public class BlockData {
 		
 	}
 	
-	public static int getBlockLayer(MBlock mb) {
+	public static int getRenderLayer(MBlock mb) {
 		Integer layer = blockLayers_meta.get(mb);
 		if (layer != null) {
 			return layer;
@@ -65,7 +65,7 @@ public class BlockData {
 		}
 	}
 	
-	public static int getBlockLayer(IBlockState state) {
+	public static int getRenderLayer(IBlockState state) {
 		MBlock mb = new MBlock(state);
 		Integer layer = blockLayers_meta.get(mb);
 		if (layer != null) {

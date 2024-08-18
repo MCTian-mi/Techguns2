@@ -56,7 +56,7 @@ public class MBlock implements Serializable {
 		this.meta = block.getMetaFromState(state);
 		this.state=state;
 		this.hasTileEntity=hasTileEnt;
-		this.layer=BlockData.getBlockLayer(this);
+		this.layer=BlockData.getRenderLayer(this);
 	}
 
 	public MBlock(Block block, int meta) {
@@ -72,7 +72,7 @@ public class MBlock implements Serializable {
 		this.meta = meta;
 		this.state = block.getStateFromMeta(meta);
 		this.hasTileEntity=hasTileEnt;
-		this.layer=BlockData.getBlockLayer(this);
+		this.layer=BlockData.getRenderLayer(this);
 	}
 
 	public IBlockState getState() {

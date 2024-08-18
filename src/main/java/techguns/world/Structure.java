@@ -46,7 +46,7 @@ public class Structure implements Serializable{
 			for (int j = 0; j < sizeY; j++) {
 				for (int k = 0; k < sizeZ; k++) {
 					BlockPos bpos = new BlockPos(x+i, y+j, z+k);
-					int layer = BlockData.getBlockLayer(world.getBlockState(bpos));
+					int layer = BlockData.getRenderLayer(world.getBlockState(bpos));
 					MBlock mblock = new MBlock(world.getBlockState(bpos));
 					int index = structure.blocks.indexOf(mblock);
 					if (index < 0) {

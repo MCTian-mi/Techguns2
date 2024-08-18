@@ -19,7 +19,7 @@ import techguns.util.MathUtil;
 
 public class GuidedMissileProjectile extends RocketProjectile{
 
-	public static final double MAX_TURN_ANGLE = 9.0 *MathUtil.D2R; //= 180° per second
+	public static final double MAX_TURN_ANGLE = 9.0 *MathUtil.D2R; //= 180 per second
 	
 	public Entity target;
 	
@@ -87,7 +87,7 @@ public class GuidedMissileProjectile extends RocketProjectile{
 		//Update Motion
 		if (this.target != null) {
 			Vec3d motion = new Vec3d(motionX, motionY, motionZ);
-			double speed = motion.lengthVector();
+			double speed = motion.length();
 			
 			Vec3d v2 = new Vec3d(target.posX, target.posY+target.height*0.5f, target.posZ).subtract(new Vec3d(this.posX, this.posY, this.posZ)).normalize();
 			Vec3d v1 = motion.normalize();
@@ -107,7 +107,7 @@ public class GuidedMissileProjectile extends RocketProjectile{
 			this.motionY = motion.y;
 			this.motionZ = motion.z;
 		}
-		//System.out.println("Motion.length="+new Vec3d(motionX, motionY, motionZ).lengthVector());
+		//System.out.println("Motion.length="+new Vec3d(motionX, motionY, motionZ).length());
 		super.onUpdate();		
 	}
 	

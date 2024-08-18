@@ -117,9 +117,8 @@ public class EntityRadiation extends Entity {
 	}
 
 	@Override
-	protected void doWaterSplashEffect() {
-		return;
-	}
+	public void doWaterSplashEffect() {
+    }
 	
 	@Override
 	public void onEntityUpdate() {

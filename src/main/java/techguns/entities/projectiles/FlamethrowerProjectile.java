@@ -32,7 +32,9 @@ public class FlamethrowerProjectile extends GenericProjectile implements ILightP
 	
 	public FlamethrowerProjectile(World worldIn) {
 		super(worldIn);
-		ClientProxy.get().createFXOnEntity("FlamethrowerTrail", this);
+		if(worldIn.isRemote) {
+			ClientProxy.get().createFXOnEntity("FlamethrowerTrail", this);
+		}
 	}
 
 	public FlamethrowerProjectile(World worldIn, double posX, double posY, double posZ, float yaw, float pitch, float damage, float speed, int TTL, float spread, float dmgDropStart,
